@@ -1,0 +1,67 @@
+@import '../../../../assets/styles/common.styles.scss';
+
+.post-modal{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    z-index: 100;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    .post-modal-user{
+        .user-name{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .user-text{
+            font-size: 14px;
+            font-weight: 400;
+            color: #727272;
+        }
+    }
+    .post-input { 
+        margin-top: 20px;
+        height: 25rem;
+        textarea{
+            width: 100%;
+            border: none;  
+            font-size: 20px;  
+        }
+    }
+}
+.profile-pic{
+    width: 55px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    img{
+        display: inline;
+        margin: 0 auto;
+        margin-left: -25%; //centers the image
+        height: 100%;
+        width: auto;
+    }
+}
+.footer{
+    padding: 16px;
+    .post-button{
+        padding: 8px 22px;
+        background-color: #e8e8e8;
+        border-radius: 22px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .enable{
+        background-color: #1774e5;
+        color: #fff;
+    }
+}
+.underline{
+    height: 1px;
+    background-color: #727272;
+    margin-top: 8px;
+}
+label {
+    cursor: pointer;
+  }

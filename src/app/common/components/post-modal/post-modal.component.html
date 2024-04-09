@@ -1,0 +1,33 @@
+<div class="post-modal">
+    <div class="post-modal-user">
+        <div class="profile-pic d-inline-block">
+            <img src="/assets/images/luffy.png" alt="Profile pic">
+        </div>
+        <div class="d-inline-block ml-10">
+            <div class="user-name">
+                Monkey D' Luffy
+            </div>
+            <div class="user-text">
+                Post to Anyone
+            </div>
+        </div>
+        <div class="cursor-pointer d-inline-block f-right" (click)="onCloseModal()">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #727272;"></i>
+        </div>
+    </div>
+    <div class="post-input">
+        <textarea #descriptionEvent placeholder="What do you want to talk about?" (keyup)="onKeyUp(descriptionEvent.value)"></textarea>
+    </div>
+    <input type="file" id="browse-btn" hidden/>
+    <label for="browse-btn">
+        <i class="fa-regular cursor-pointer fa-image fa-lg" style="color: #727272;"></i>
+    </label>
+    <div class="underline"></div>
+    <div class="footer">
+        <div (click)="onPost()" 
+            [ngClass]="{'enable':description!==''}"
+            class="post-button cursor-pointer f-right">
+            Post
+        </div>
+    </div>
+</div>

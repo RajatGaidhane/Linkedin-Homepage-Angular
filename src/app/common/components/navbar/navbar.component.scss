@@ -1,0 +1,36 @@
+.lh-navbar{
+    padding: 16px 16%;
+    background-color: #ffff;
+    .linkedin-icon{
+        margin-top: 10px;
+        margin-right: 8px;
+        display: inline-block;
+    }
+    .navbar__search{
+        display: inline-block;
+        width: 32%;
+    }
+    .lh-navbar__items{
+        display: inline-flex;
+        float: right;
+        .lh-navbar__menu{
+            text-align: center;
+            //width: 70px;
+            cursor: pointer;
+            padding: 2px 20px;
+        }
+        .lh-menu-name{
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}
+.grey-color{
+    color: #727272;
+}
+.selected-menu-item{
+    border-bottom: 2px solid;
+}
+.mr-5{
+    margin-right: 5px;
+}

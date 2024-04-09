@@ -1,0 +1,73 @@
+<!--- Start of User Card -->
+<div class="user-card">
+    <img class="profile-pic" src="/assets/images/luffy.png" alt="Profile pic">
+    <div class="user-name bg-white border-lrb">
+        <div class="name">
+           Monkey D' Luffy
+        </div>
+        <div class="designation">
+            Software Engineer
+        </div>
+    </div>
+    <div class="profile-summary bg-white border-lrb">
+        <div class="profile-data" *ngFor="let data of profileData">
+            <div class="profile-data__title"> 
+                {{data.title}}
+            </div>
+            <div class="profile-data__count">
+                {{data.count}}
+            </div>
+            <div class="heading-3" *ngIf="data.title==='Connections'">Grow your network</div>
+        </div>
+    </div>
+    <div class="ai-info bg-white border-lrb">
+        <div class="ai-info-text">
+            Strengthen your profile with an AI writing assistant
+        </div>
+        <div class="heading-3">
+            <i class="fa-solid fa-square fa-spin" style="color: #e78d0d;"></i>
+            Reactivate Premium: 50% Off
+        </div>
+    </div>
+    <div class="my-items bg-white border-lrb">
+        <div class="pl-14">
+            <i class="fa-solid fa-bookmark" style="color: #828487;"></i>
+            <div class="heading-3 ml-10">
+                My items
+            </div>
+        </div>
+    </div>
+</div>
+<!--- End of User Card -->
+<!--- Start of Recent Card -->
+<div class="recent-card bg-white">
+    <div class="recent-dropdown">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="recent-dropdown accordion-button" 
+                    [ngClass]="{'collapsed':!recentToggle}"
+                    style="padding: 0px;" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                    aria-expanded="false" aria-controls="flush-collapseOne"
+                    (click)="recentToggle=!recentToggle">
+                    Recent
+                </button>
+                </h2>
+                <div id="flush-collapseOne" 
+                    class="accordion-collapse" 
+                    [ngClass]="{'collapse':!recentToggle, 'show':recentToggle}"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">#India</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="link"><a>Groups</a></div>
+    <div class="link"><a>Events</a></div>
+    <div class="link"><a>Followed</a></div>
+</div>
+<div class="discover-div heading-2 bg-white border-lrb">
+    Discover more
+</div>
+<!--- End of Recent Card -->

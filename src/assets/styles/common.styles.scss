@@ -1,0 +1,52 @@
+.bg-white{
+    background-color: #fff;
+}
+.border-lrb{
+    border-bottom: 1px solid #727272;
+    border-left: 1px solid #727272;
+    border-right: 1px solid #727272;
+}
+.heading-3{
+    font-size: 12px;
+    font-weight: 600;
+}
+.heading-2{
+    font-size: 14px;
+    font-weight: 600;
+}
+.heading-1{
+    font-size: 16px;
+    font-weight: 600;
+}
+.pl-14{
+    padding: 14px;
+    display: flex;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.d-flex{
+    display: flex;
+}
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+.d-inline-block{
+    display: inline-block;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 50;
+    background-color: black;
+    opacity: 0.7;
+  }

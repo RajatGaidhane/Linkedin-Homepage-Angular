@@ -1,0 +1,103 @@
+@import '../../../../../assets/styles/common.styles.scss';
+
+.user-card{
+    padding-top: 20px;
+    .profile-pic{
+        border-radius: 10px 10px 0px 0px;
+        width:100%
+    }
+    .user-name{
+        text-align: center;
+        padding-top: 45px;
+        padding-bottom: 20px;
+        .name{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .designation{
+            font-size: 12px;
+            font-weight: 400;
+            color: #727272;
+        }
+    }
+    .profile-summary{
+        padding: 12px 0px;
+        .profile-data{
+            padding: 6px 14px;
+            cursor: pointer;
+            .profile-data__title{
+                font-size: 12px;
+                font-weight: 600;
+                color: #727272;
+                display: inline;
+            }
+            .profile-data__count{
+                font-size: 12px;
+                font-weight: 600;
+                color: #1774e5;
+                display: inline;
+                float: right;
+            }
+        }
+        .profile-data:hover{
+            background-color: #f0ece9;
+        }
+    }
+    .ai-info{
+        cursor: pointer;
+        padding: 12px 15px;
+        .ai-info-text{
+            font-size: 12px;
+            font-weight: 400;
+            color: #727272;
+        }
+    }
+    .ai-info:hover{
+        background-color: #f0ece9 !important;
+    }
+    .my-items{
+        cursor: pointer;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .my-items:hover{
+        background-color: #f0ece9 !important;
+    }
+}
+.recent-card{
+    margin-top: 10px;
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid #727272;
+    padding: 14px;
+    .recent-dropdown{
+        font-size: 12px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .link{
+        font-size: 12px;
+        font-weight: 600;
+        color: #1774e5;
+        cursor: pointer;
+        margin-top: 12px;
+    }
+    .link:hover{
+        text-decoration: underline;
+    }
+    .accordion-body{
+        padding: 10px 16px;
+        cursor: pointer;
+    }
+    .accordion-body:hover{
+        background-color: #f0ece9 !important;
+    }
+}
+.discover-div{
+    color: #727272;
+    padding: 12px;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+}
+.discover-div:hover{
+    background-color: #f0ece9 !important;
+}

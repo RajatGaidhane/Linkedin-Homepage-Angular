@@ -1,0 +1,98 @@
+<div class="backdrop" *ngIf="postModal"></div>
+<app-post-modal *ngIf="postModal" (modalEvent)="onPostModalEvent($event)"></app-post-modal>
+<div class="post-div bg-white">
+    <div class="d-flex">
+        <div class="profile-pic">
+            <img src="/assets/images/luffy.png" alt="Profile pic">
+        </div>
+        <div class="start-post-btn heading-2" (click)="postModal=true">
+            Start a post
+        </div>
+    </div>
+    <div class="action-container">
+        <div class="sub-menu heading-2 f-left">
+            <i class="fa-regular fa-image fa-lg" style="color: #0789f2;"></i>
+            Media
+        </div>
+        <div class="sub-menu heading-2">
+            <i class="fa-solid fa-calendar-days fa-lg" style="color: #ab590d;"></i>
+            Event
+        </div>
+        <div class="sub-menu heading-2 f-right">
+            <i class="fa-regular fa-newspaper fa-lg" style="color: #c73329;"></i>
+            Write article
+        </div>
+    </div>
+</div>
+<div class="sort">
+    <div class="underline d-inline-block"></div>
+    <div class="sort-button d-inline-block f-right">
+        <span class="sort-by">Sort by:</span> 
+        <span class="heading-3">Top
+            <i class="fa-solid fa-caret-down"></i>
+        </span>
+    </div>
+</div>
+<!---Post starts here-->
+<div class="post bg-white" *ngFor="let post of posts; let i = index;">
+    <div class="post__user">
+        <div class="profile-pic d-inline-block">
+            <img src="{{post.user.profilePic}}" alt="Profile pic">
+        </div>
+        <div class="post__user-details d-inline-block">
+            <div class="user-name heading-2">
+                {{post.user.name}}
+            </div>
+            <div class="user-text">
+                {{post.user.bio}}
+            </div>
+            <div class="user-text">
+                {{post.post.duration}}
+                <span> <i class="fa-solid fa-earth-americas" style="color: #72767e;"></i></span>
+            </div>
+        </div>
+        <div class="post__user-follow d-inline-block f-right">
+            <i class="fa-solid fa-plus fa-lg" style="color: #0b66c2;"></i>
+            <span class="heading-1">Follow</span>
+        </div>
+    </div>
+    <div class="post__description">
+        {{post.post.description}}
+    </div>
+    <div class="post__image">
+        <img src="{{post.post.image}}" alt="post picture">
+    </div>
+    <div class="post__likes">
+        <div class="d-inline-block">
+            <i class="fa-solid fa-thumbs-up" style="color: #39a6f9;"></i>
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <span style="margin-left: 5px;" *ngIf="post.post.likes>0">Rajat Gaidhane and {{post.post.likes}} others</span>
+            <span style="margin-left: 5px;" *ngIf="post.post.likes===0">{{post.post.likes}}</span>
+        </div>
+        <div class="d-inline-block f-right">
+            <span>{{post.post.comments}} comments . {{post.post.repost}} reposts</span>
+        </div>
+    </div>
+    <div class="underline"></div>
+    <div class="post__actions">
+        <div class="row">
+            <div class="like cursor-pointer pt-10" (click)="onLike(i)">
+                <i class="fa-regular fa-thumbs-up fa-flip-horizontal" style="color: #727272;"></i>
+                <span class="heading-1 ml-8">Like</span>
+            </div>
+            <div class="comment cursor-pointer pt-10">
+                <i class="fa-regular fa-comment" style="color: #727272;"></i>
+                <span class="heading-1 ml-8">Comment</span>
+            </div>
+            <div class="repost cursor-pointer pt-10">
+                <i class="fa-solid fa-rotate" style="color: #727272;"></i>
+                <span class="heading-1 ml-8">Repost</span>
+            </div>
+            <div class="send cursor-pointer pt-10">
+                <i class="fa-solid fa-paper-plane" style="color: #727272;"></i>
+                <span class="heading-1 ml-8">Send</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!---Post ends here-->
