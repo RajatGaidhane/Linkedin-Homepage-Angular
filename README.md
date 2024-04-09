@@ -1,5 +1,8 @@
 # LinkedinHomepage
 
+![In-angular-homepage](https://github.com/RajatGaidhane/Linkedin-Homepage-Angular/assets/47490478/225d9721-601a-469c-b98f-448b10f61a5f)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
